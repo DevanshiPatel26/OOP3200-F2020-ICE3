@@ -58,9 +58,9 @@ std::string Professor::ToString()
     std::string output_string;
 
     output_string += Person::ToString();
-    output_string += "----------------------------------------\n";
+    output_string += "----------------------------------------------------\n";
     output_string += "Employee ID: " + getEmployeeID() + "\n";
-    output_string += "----------------------------------------\n";
+    output_string += "----------------------------------------------------\n";
 
     return output_string;
 }
