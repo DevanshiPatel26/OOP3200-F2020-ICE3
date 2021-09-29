@@ -4,10 +4,11 @@
  * @version 1.0
  */
 
+#pragma once
 
 #ifndef _STUDENT_H
 #define _STUDENT_H
-
+#include <string>
 #include "Person.h"
 
 
@@ -20,20 +21,22 @@ public:
  * @param age
  * @param student_id
  */
-void Student(string first_name, string last_name, float age, string student_id);
-    
-string getStudentID();
+Student(const std::string& first_name, const std::string& last_name, float age, std::string student_id);
+
+std::string getStudentID() const;
     
 /**
  * @param value
  */
-void setStudentID(string value);
+void setStudentID(const std::string& value);
     
-void Studies();
-    
-string ToString();
-private: 
-    string m_studentID;
+void Studies() const;
+
+std::string ToString() override;
+
+private:
+	std::string m_studentID;
+std::string student_id_;
 };
 
 #endif //_STUDENT_H
